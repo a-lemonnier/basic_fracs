@@ -26,8 +26,8 @@ public:
     _frac& operator^ ( _T2 n );
     _frac& operator/ ( const _frac&frac );
    
-    _frac& operator++ ( );
-    _frac& operator-- ( );
+    _frac& operator++ ( int );
+    _frac& operator-- ( int );
     
     _frac& operator+= ( const _frac &frac );
     _frac& operator-= ( const _frac &frac );

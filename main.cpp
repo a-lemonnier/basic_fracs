@@ -13,4 +13,6 @@ int main(int argc, char **argv) {
         B.show();
         std::cout <<"\n";
     }    
+    B++; B.show(); std::cout <<"\n";
+    B--; B.show(); std::cout <<"\n";
 }
