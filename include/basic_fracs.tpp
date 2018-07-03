@@ -126,6 +126,22 @@ _frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator*= ( const _frac& frac ) {
     return *res;    
 }
 
+template<class _T, class _T1, class _T2>
+_frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator++ ( ) {
+    _frac add=new _frac(1,1);
+    this+=add;
+    this->simplify();
+    return *this;    
+}
+
+template<class _T, class _T1, class _T2>
+_frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator-- ( ) {
+    _frac add=new _frac(1,1);
+    this-=add;
+    this->simplify();
+    return *this;    
+}
+
 
 template<class _T, class _T1, class _T2>
 bool _frac<_T, _T1, _T2>::operator> ( const _frac& frac ) {
