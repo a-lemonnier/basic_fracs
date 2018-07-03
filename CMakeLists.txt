@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 2.6)
-project(qnl)
+project(basic_frac)
 
-add_executable(qnl main.cpp)
+add_subdirectory(./include)
 
-install(TARGETS qnl RUNTIME DESTINATION bin)
+add_compile_options(-std=c++11 -o3 -Wall -pedantic)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(basic_frac main.cpp include/basic_fracs.tpp)
+
+install(TARGETS frac RUNTIME DESTINATION bin)
