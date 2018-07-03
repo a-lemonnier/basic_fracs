@@ -5,8 +5,9 @@ Coded to compute oscillator strength with hyperfine structure: Energy levels, 6j
 Aims:
 - [x] Basic fraction definition
 - [x] Operators: + - * / ^ == != < > ++ --
-- [x] Show fractions
-- [x] Simplify fractions
+- [x] Method show() fractions
+- [x] Method simplify() fractions
+- [x] Method abs() fractions
 
 TODO:
 
