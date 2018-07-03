@@ -1,13 +1,11 @@
-#ifndef FUNC_HPP
-#define FUNC_HPP
+#ifndef BASIC_FRACS_HPP
+#define BASIC_FRACS_HPP
 
 #include <iostream>
 #include <cmath>
 #include <iomanip>
 
-/**
- * @todo write docs
- */
+
 template<class _T=double long, class _T1=double long, class _T2=double long>
 class _frac {
 public:
@@ -15,7 +13,6 @@ public:
     _T F[2];
     
     _frac(_T1 a, _T2 b);
-
     _frac();
 
     void show(void);
@@ -46,4 +43,4 @@ private:
 
 #include "basic_fracs.tpp"
 
-#endif // FUNC_HPP
+#endif // BASIC_FRACS_HPP

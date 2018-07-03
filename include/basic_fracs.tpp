@@ -45,7 +45,6 @@ _frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator+ ( const _frac<_T, _T1, _T2> 
     return *res;    
 }
 
-
 template<class _T, class _T1, class _T2>
 _frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator- ( const _frac& frac ) {
     _frac* res=new _frac();
@@ -58,7 +57,6 @@ _frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator- ( const _frac& frac ) {
     res->simplify();
     return *res;    
 }
-
 
 template<class _T, class _T1, class _T2>
 _frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator* ( const _frac& frac ) {
@@ -91,7 +89,6 @@ _frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator/ ( const _frac<_T, _T1, _T2> 
     res->simplify();
     return *res;    
 }
-
 
 template<class _T, class _T1, class _T2>
 _frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator+= ( const _frac& frac ) {
@@ -144,7 +141,6 @@ bool _frac<_T, _T1, _T2>::operator!= ( const _frac& frac ) {
 // Method
 // ***********
 
-
 template<class _T, class _T1, class _T2>
 void _frac<_T, _T1, _T2>::show() {
     unsigned int prec=10;
@@ -153,8 +149,16 @@ void _frac<_T, _T1, _T2>::show() {
     if (sizeof(_T)==sizeof(double)) prec=308;
     if (sizeof(_T)==sizeof(long)) prec=12;
     if (sizeof(_T)==sizeof(int)) prec=12;
-    if  (this->F[1]!=1 &&  this->F[1]!=0) std::cout << std::setprecision(prec) << static_cast<_T>(this->F[0]) << "/" << static_cast<_T>(this->F[1]) << " ~ " << static_cast<_T>(this->F[0]/this->F[1]) ;
-    if  (this->F[1]==1) std::cout << std::setprecision(prec) << static_cast<_T>(this->F[0]);
+    
+    if  (this->F[1]!=1 &&  this->F[1]!=0) 
+        std::cout << std::setprecision(prec) 
+                    << static_cast<_T>(this->F[0]) 
+                    << "/" << static_cast<_T>(this->F[1]) 
+                    << " ~ " 
+                    << static_cast<_T>(this->F[0]/this->F[1]) ;
+    if  (this->F[1]==1) 
+        std::cout << std::setprecision(prec) 
+                    << static_cast<_T>(this->F[0]);
     if  (this->F[1]==0) std::cerr << "/0!\n";
 }
 
