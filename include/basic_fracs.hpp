@@ -30,6 +30,9 @@ public:
     _frac& operator-= ( const _frac &frac );
     _frac& operator*= ( const _frac &frac );
     
+    bool operator< ( const _frac &frac );
+    bool operator> ( const _frac &frac );
+    
     bool operator== ( const _frac &frac );
     bool operator!= ( const _frac &frac );
     

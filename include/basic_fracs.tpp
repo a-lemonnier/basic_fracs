@@ -126,6 +126,18 @@ _frac<_T, _T1, _T2>& _frac<_T, _T1, _T2>::operator*= ( const _frac& frac ) {
     return *res;    
 }
 
+
+template<class _T, class _T1, class _T2>
+bool _frac<_T, _T1, _T2>::operator> ( const _frac& frac ) {
+    return this->F[0]/this->F[1] > frac.F[0]==frac.F[1];    
+}
+
+template<class _T, class _T1, class _T2>
+bool _frac<_T, _T1, _T2>::operator< ( const _frac& frac ) {
+    return this->F[0]/this->F[1] < frac.F[0]==frac.F[1];    
+}
+
+
 template<class _T, class _T1, class _T2>
 bool _frac<_T, _T1, _T2>::operator== ( const _frac& frac ) {
     return this->F[0]==frac.F[0] && this->F[1]==frac.F[0];    
