@@ -2,14 +2,19 @@ kind: pipeline
 name: build-and-test-amd64
 
 platform:
-  arch: amd64
+  os: linux
+  arch: arm64
 
+ environment:
+    CC: gcc
+    CMAKE_FLAGS: 'CXX_STANDARD=17'
+  
 steps:
-- name: Build
-  image: gcc
+- name: Build and Test
+  image: ubuntu:18.04
   commands:
-  - apt search cmake
-  - apt-get install boost 
+  - apt-get update -y
+  - apt-get install -y make gcc g++ cmake perl boost 
   - cmake .
   - make
   - ./basic_fracs
