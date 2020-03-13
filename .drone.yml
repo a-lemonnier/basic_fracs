@@ -14,3 +14,7 @@ steps:
     - cmake .
     - make
     - ./basic_fracs
+
+trigger:
+  event:
+    exclude: [ promote ]
