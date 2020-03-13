@@ -5,14 +5,13 @@ platform:
   os: linux
   arch: arm64
 
- environment:
-    CC: gcc
-    CMAKE_FLAGS: 'CXX_STANDARD=17'
-  
 steps:
 - name: Build and Test
   image: ubuntu:18.04
-  commands:
+  environment:
+  CC: gcc
+  CMAKE_FLAGS: 'CXX_STANDARD=17'
+commands:
   - apt-get update -y
   - apt-get install -y make gcc g++ cmake perl boost 
   - cmake .
