@@ -8,8 +8,8 @@ steps:
 - name: Build
   image: gcc
   commands:
-  - apt search g++
-  - apt-get install g++ boost libboost-all-dev cmake-data cmake
+  - apt search cmake
+  - apt-get install boost 
   - cmake .
   - make
   - ./basic_fracs
