@@ -7,13 +7,10 @@ platform:
 
 steps:
 - name: Build and Test
-  image: ubuntu:18.04
-  environment:
-  CC: gcc
-  CMAKE_FLAGS: 'CXX_STANDARD=17'
-commands:
-  - apt-get update -y
-  - apt-get install -y make gcc g++ cmake perl boost 
-  - cmake .
-  - make
-  - ./basic_fracs
+  image: ubuntu:19.04
+  commands:
+    - apt-get update -y
+    - apt-get install -y make gcc g++ cmake perl libboost-all-dev
+    - cmake .
+    - make
+    - ./basic_fracs
