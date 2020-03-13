@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <cstdio>
 
 #include "include/basic_fracs.hpp"
 
@@ -17,5 +19,5 @@ int main(int argc, char **argv) {
     B++; B.show(); std::cout <<"\n";
     B--; B.show(); std::cout <<"\n";
    
-   return 1;
+   return EXIT_SUCCESS;
 }
